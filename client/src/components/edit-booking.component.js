@@ -36,7 +36,7 @@ export default class EditBooking extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:5000/bookings/')
+    axios.get('/bookings/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -87,7 +87,7 @@ export default class EditBooking extends Component {
 
     console.log(booking);
 
-    axios.post('http://localhost:5000/bookings/update/' + this.props.match.params.id, booking)
+    axios.post('/bookings/update/' + this.props.match.params.id, booking)
       .then(res => console.log(res.data));
 
     window.location = '/';

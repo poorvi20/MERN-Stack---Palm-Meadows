@@ -83,7 +83,7 @@ export default class MakeBooking extends Component {
         console.log(booking)       
 
         
-        axios.post('http://localhost:5000/bookings/add',booking)
+        axios.post('/bookings/add',booking)
         .then(res => console.log(res.data));
         
        
